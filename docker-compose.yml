@@ -6,4 +6,4 @@ services:
     image: firefox-telegram-novnc
     container_name: firefox-telegram
     ports: 
-      - 8080:8080
+      - 6010:8080
