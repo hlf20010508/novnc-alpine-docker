@@ -8,7 +8,9 @@ RUN \
   supervisor \
   xvfb \
   x11vnc \
-  novnc
+  novnc \
+  firefox \
+  mesa-dri-gallium
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 EXPOSE 8080
@@ -20,7 +22,7 @@ ENV HOME=/root \
   LANGUAGE=en_US.UTF-8 \
   LC_ALL=C.UTF-8 \
   DISPLAY=:0.0 \
-  DISPLAY_WIDTH=1024 \
-  DISPLAY_HEIGHT=768
+  DISPLAY_WIDTH=480 \
+  DISPLAY_HEIGHT=720
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
