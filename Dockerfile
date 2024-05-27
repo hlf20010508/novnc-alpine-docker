@@ -2,7 +2,7 @@ FROM alpine:edge
 
 RUN \
   # Install required packages
-  echo "http://dl-3.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories &&\
+  echo "https://dl-3.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories &&\
   apk --update --upgrade add --no-cache \
   fluxbox \
   supervisor \
@@ -10,7 +10,11 @@ RUN \
   x11vnc \
   novnc \
   firefox \
-  mesa-dri-gallium
+  mesa-dri-gallium \
+  ttf-dejavu \
+  ttf-liberation \
+  fontconfig \
+  font-wqy-zenhei
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 EXPOSE 8080
