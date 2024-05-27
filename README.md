@@ -38,6 +38,8 @@ $ docker build -t mynovnc .
 $ docker run -it --rm -p 8080:8080 mynovnc
 ```
 
-Open the browser http://localhost:8080.  
+Open the browser http://localhost:8080/vnc.html.  
 Click 'Connect'.  
 Then you can see xterm.
+
+Or open http://localhost:8080/vnc_lite.html.
