@@ -31,6 +31,12 @@ RUN \
     echo 'autorestart=true' >> supervisord.conf
 ```
 
+# With OpenGL
+To support OpenGL on a CPU-only host, add this package:
+```Dockerfile
+RUN apk add --no-cache mesa-dri-gallium
+```
+
 Build and run the image.
 
 ```bash
